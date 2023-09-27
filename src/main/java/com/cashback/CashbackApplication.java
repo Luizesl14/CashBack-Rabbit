@@ -1,6 +1,6 @@
 package com.cashback;
 
-import com.cashback.service.ICustomerService;
+import com.cashback.service.customer.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

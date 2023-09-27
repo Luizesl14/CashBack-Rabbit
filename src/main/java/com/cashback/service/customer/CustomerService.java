@@ -1,7 +1,7 @@
-package com.cashback.service;
+package com.cashback.service.customer;
 
-import com.cashback.model.Customer;
-import com.cashback.repository.ICustomerRepository;
+import com.cashback.model.customer.Customer;
+import com.cashback.repository.customer.ICustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

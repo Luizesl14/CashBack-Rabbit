@@ -1,7 +1,6 @@
-package com.cashback.config;
+package com.cashback.config.spring;
 
-import com.cashback.repository.IQueueRepository;
-import com.cashback.service.IQueueService;
+import com.cashback.repository.queue.IQueueRepository;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;

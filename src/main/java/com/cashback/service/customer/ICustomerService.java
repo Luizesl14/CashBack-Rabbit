@@ -1,6 +1,6 @@
-package com.cashback.service;
+package com.cashback.service.customer;
 
-import com.cashback.model.Customer;
+import com.cashback.model.customer.Customer;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

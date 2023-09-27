@@ -1,4 +1,4 @@
-package com.cashback.model;
+package com.cashback.model.enums;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;

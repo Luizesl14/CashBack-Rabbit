@@ -1,4 +1,4 @@
-package com.cashback.shared.adapters;
+package com.cashback.shared.adapters.message;
 
 import com.cashback.model.records.MessageDto;
 import org.springframework.stereotype.Component;

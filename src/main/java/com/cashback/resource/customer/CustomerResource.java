@@ -1,11 +1,8 @@
 package com.cashback.resource.customer;
 
-import com.cashback.model.Customer;
-import com.cashback.model.QueueConfig;
-import com.cashback.resource.messager.IMessageResource;
-import com.cashback.service.ICustomerService;
+import com.cashback.model.customer.Customer;
+import com.cashback.service.customer.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

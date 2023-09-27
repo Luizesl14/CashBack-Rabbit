@@ -1,13 +1,12 @@
-package com.cashback.model;
+package com.cashback.model.customer;
 
 
+import com.cashback.model.queue.QueueConfig;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @Getter

@@ -1,13 +1,10 @@
-package com.cashback.service;
+package com.cashback.service.message;
 
-import com.cashback.model.QueueConfig;
-import com.cashback.model.QueueType;
+import com.cashback.model.queue.QueueConfig;
+import com.cashback.model.enums.QueueType;
 import com.cashback.model.records.MessageDto;
-import com.cashback.repository.IQueueRepository;
-import com.cashback.shared.adapters.IMessageAdapter;
-import jakarta.persistence.EntityNotFoundException;
-import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.rabbit.core.RabbitAdmin;
+import com.cashback.repository.queue.IQueueRepository;
+import com.cashback.shared.adapters.message.IMessageAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.cashback.model.records;
 
 
-import com.cashback.model.QueueType;
+import com.cashback.model.enums.QueueType;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

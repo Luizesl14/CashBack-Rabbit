@@ -1,6 +1,6 @@
-package com.cashback.repository;
+package com.cashback.repository.customer;
 
-import com.cashback.model.Customer;
+import com.cashback.model.customer.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

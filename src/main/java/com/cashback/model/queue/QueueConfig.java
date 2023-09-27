@@ -1,5 +1,7 @@
-package com.cashback.model;
+package com.cashback.model.queue;
 
+import com.cashback.model.customer.Customer;
+import com.cashback.model.enums.QueueType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +12,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "PRO_QUEUE")
-public class QueueMessage {
+public class QueueConfig {
 
 
     @Id

@@ -1,6 +1,6 @@
-package com.cashback.service;
+package com.cashback.service.queue;
 
-import com.cashback.model.QueueConfig;
+import com.cashback.model.queue.QueueConfig;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

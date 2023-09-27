@@ -1,8 +1,7 @@
-package com.cashback.service;
+package com.cashback.service.queue;
 
-import com.cashback.config.RabbitMQConfig;
-import com.cashback.model.QueueConfig;
-import com.cashback.repository.IQueueRepository;
+import com.cashback.model.queue.QueueConfig;
+import com.cashback.repository.queue.IQueueRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;

@@ -1,10 +1,9 @@
 package com.cashback.resource.messager;
 
-import com.cashback.model.QueueConfig;
+import com.cashback.model.queue.QueueConfig;
 import com.cashback.model.records.MessageDto;
-import com.cashback.service.IQueueService;
-import com.cashback.service.SendMessageService;
-import com.cashback.shared.adapters.IMessageAdapter;
+import com.cashback.service.queue.IQueueService;
+import com.cashback.service.message.SendMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

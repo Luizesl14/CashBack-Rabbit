@@ -1,7 +1,7 @@
-package com.cashback.repository;
+package com.cashback.repository.queue;
 
 
-import com.cashback.model.QueueConfig;
+import com.cashback.model.queue.QueueConfig;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

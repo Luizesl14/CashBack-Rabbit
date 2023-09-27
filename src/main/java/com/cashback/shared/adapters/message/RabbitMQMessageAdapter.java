@@ -1,7 +1,7 @@
-package com.cashback.shared.adapters;
+package com.cashback.shared.adapters.message;
 
 import com.cashback.model.records.MessageDto;
-import com.cashback.service.IQueueService;
+import com.cashback.service.queue.IQueueService;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
