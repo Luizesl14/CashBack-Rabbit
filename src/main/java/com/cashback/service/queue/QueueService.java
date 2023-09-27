@@ -7,6 +7,7 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -65,7 +66,7 @@ public class QueueService implements IQueueService{
         System.out.println("Queue deleted: " + name);
     }
 
-    @Cacheable(value = "queuesCacheable")
+    @Caching
     public List<String> getDynamicQueue() {
         return this.queueRepository.findAll()
                 .stream()

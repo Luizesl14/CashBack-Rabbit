@@ -2,6 +2,7 @@ package com.cashback.model.queue;
 
 import com.cashback.model.customer.Customer;
 import com.cashback.model.enums.QueueType;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,6 +34,7 @@ public class QueueConfig {
     @Column(name = "type")
     private QueueType type;
 
+    @JsonIgnoreProperties(value = "queues")
     @ManyToMany(mappedBy = "queues")
     private List<Customer> customers;
 

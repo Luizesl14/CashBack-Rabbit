@@ -27,17 +27,14 @@ public class SendMessageService{
 
     public String sortedMessage(QueueType type){
         String result = null;
-        for (QueueConfig q: this.getQueue()){
-
-            if(QueueType.IN.name().equals(type.name()))
-               result=q.getDomainId() + "." + q.getVersion() + "." + q.getNameQueue();
-
-            if(QueueType.OUT.name().equals(type.name()))
-                result= q.getDomainId() + "." + q.getVersion() + "." + q.getNameQueue();
+        List<QueueConfig> queues = this.getQueue();
+        for (QueueConfig q: queues){
+            if(type.equals(q.getType())){
+                result=q.getDomainId() + "." + q.getVersion() + "." + q.getNameQueue();
+            }
         }
         return result;
     }
-
 
     public void sendingMessage(MessageDto messageDto){
         messageDto.setQueueId(this.sortedMessage(messageDto.getType()));

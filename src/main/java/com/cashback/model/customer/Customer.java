@@ -2,6 +2,7 @@ package com.cashback.model.customer;
 
 
 import com.cashback.model.queue.QueueConfig;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +27,7 @@ public class Customer {
     @Column(name = "name")
     private String name;
 
+    @JsonIgnoreProperties(value = "customers")
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "pro_customer_and_queue",
