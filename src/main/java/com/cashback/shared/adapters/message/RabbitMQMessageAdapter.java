@@ -22,10 +22,10 @@ public class RabbitMQMessageAdapter implements IMessageAdapter {
     @RabbitListener(queues = "#{queueService.getDynamicQueue()}")
     @Override
     public void receiveMessage(String message,@Header(AmqpHeaders.CONSUMER_QUEUE) String queue) {
-        System.out.println("*****************************************************************");
-        System.out.println("Message" + message);
-        System.out.println("Header" + queue);
-        System.out.println("*****************************************************************");
+        System.out.println();
+        System.out.println("Message: " + message);
+        System.out.println("Header: " + queue);
+        System.out.println();
 
 
     }

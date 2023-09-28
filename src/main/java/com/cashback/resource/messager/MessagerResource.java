@@ -4,7 +4,9 @@ import com.cashback.model.queue.QueueConfig;
 import com.cashback.model.records.MessageDto;
 import com.cashback.service.queue.IQueueService;
 import com.cashback.service.message.SendMessageService;
+import com.cashback.service.queue.QueueService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,8 +15,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/message")
 public class MessagerResource implements IMessageResource<QueueConfig> {
 
+
     @Autowired
-    private IQueueService messageService;
+    private QueueService messageService;
 
     @Autowired
     private SendMessageService sendMessage;
@@ -35,6 +38,18 @@ public class MessagerResource implements IMessageResource<QueueConfig> {
     @Override
     public ResponseEntity<?> create() {
         this.messageService.createQueues();
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping( "/start")
+    public ResponseEntity<?> startConsumers() {
+        this.messageService.startConsumers();
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping( "/stop")
+    public ResponseEntity<?> stopConsumers() {
+        this.messageService.stopConsumers();
         return ResponseEntity.ok().build();
     }
 

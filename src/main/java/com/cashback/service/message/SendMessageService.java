@@ -6,6 +6,7 @@ import com.cashback.model.records.MessageDto;
 import com.cashback.repository.queue.IQueueRepository;
 import com.cashback.shared.adapters.message.IMessageAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,8 @@ public class SendMessageService{
     @Autowired
     private IQueueRepository queueRepository;
 
+
+    @Qualifier("rabbitMQMessageAdapter")
     @Autowired
     private IMessageAdapter adapter;
 
